@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/MyBank.Account.API/MyBank.Account.API.csproj",
+                "${workspaceFolder}/MyBank.MyAccount.API/MyBank.MyAccount.API.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/MyBank.Account.API/MyBank.Account.API.csproj",
+                "${workspaceFolder}/MyBank.MyAccount.API/MyBank.MyAccount.API.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/MyBank.Account.API/MyBank.Account.API.csproj"
+                "${workspaceFolder}/MyBank.MyAccount.API/MyBank.MyAccount.API.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

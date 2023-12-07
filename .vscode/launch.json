@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/MyBank.Account.API/bin/Debug/net8.0/MyBank.Account.API.dll",
+            "program": "${workspaceFolder}/MyBank.MyAccount.API/bin/Debug/net8.0/MyBank.MyAccount.API.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/MyBank.Account.API",
+            "cwd": "${workspaceFolder}/MyBank.MyAccount.API",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
