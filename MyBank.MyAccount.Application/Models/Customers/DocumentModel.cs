@@ -1,7 +1,6 @@
-namespace MyBank.MyAccount.Application.Models.Customers
+namespace MyBank.MyAccount.Application.Models.Customers;
+
+public class DocumentModel
 {
-    public class DocumentModel
-    {
-        public string CPF { get; set; } = default!;
-    }
+    public string CPF { get; set; } = default!;
 }
