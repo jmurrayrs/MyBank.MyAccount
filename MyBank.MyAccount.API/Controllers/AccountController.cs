@@ -1,7 +1,8 @@
+using HaidaiTech.Notificator.Interfaces;
+using HaidaiTech.Notificator.NotificationContextMessages;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using MyBank.MyAccount.Application.Commands;
-using Notificator.Interfaces;
 
 namespace MyBank.MyAccount.API.Controllers
 {
@@ -10,11 +11,11 @@ namespace MyBank.MyAccount.API.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IMediator _mediator;
-        private readonly INotificationContext _notificationContext;
+        private readonly INotificationContext<NotificationContextMessage> _notificationContext;
 
         public AccountController(
             IMediator mediator,
-            INotificationContext notificationContext
+            INotificationContext<NotificationContextMessage> notificationContext
         )
         {
             _mediator = mediator;

@@ -1,23 +1,26 @@
 using Microsoft.EntityFrameworkCore.Storage;
+using MyBank.MyAccount.Domain.Aggregates.Accounts;
+using MyBank.MyAccount.Domain.Aggregates.Costumers;
 using MyBank.MyAccount.Domain.Interfaces.Repository;
 using MyBank.MyAccount.Infra.Context;
-using MyBank.MyAccount.Infra.Customers;
+using MyBank.MyAccount.Infra.Repository;
 
 namespace MyBank.MyAccount.Infra.UoW;
 
-public class UnitOfWork : IUnitOfWork
+public class UnitOfWork : IUnitOfWork, IDisposable
 {
     private readonly AppDbContext _dbContext;
-    private ICustomerRepository _customerRepository = default!;
-    public ICustomerRepository CustomerRepository => _customerRepository ??= new CustomerRepository(_dbContext);
+    public IRepository<Customer> CustomerRepository => new GenericRepository<Customer>(_dbContext);
+    public IRepository<Account> AccountRepository => new GenericRepository<Account>(_dbContext);
     private readonly IDbContextTransaction _transaction;
 
 
-    public UnitOfWork(AppDbContext dbContext)
+    public UnitOfWork(
+        AppDbContext dbContext
+    )
     {
         _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         _transaction = _dbContext.Database.BeginTransaction();
-
     }
 
     public async Task CommitAsync()
@@ -61,4 +64,5 @@ public class UnitOfWork : IUnitOfWork
         _transaction.Dispose();
         _dbContext.Dispose();
     }
+
 }

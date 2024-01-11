@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBank.MyAccount.Domain", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBank.MyAccount.Infra", "MyBank.MyAccount.Infra\MyBank.MyAccount.Infra.csproj", "{3497FCC5-F3DE-43D2-80B4-6936831EB9B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBank.MyAccount.Crosscutting", "MyBank.MyAccount.Crosscutting\MyBank.MyAccount.Crosscutting.csproj", "{E0C40300-73F9-46CA-8AA3-7E42EEDB32AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{3497FCC5-F3DE-43D2-80B4-6936831EB9B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3497FCC5-F3DE-43D2-80B4-6936831EB9B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3497FCC5-F3DE-43D2-80B4-6936831EB9B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C40300-73F9-46CA-8AA3-7E42EEDB32AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C40300-73F9-46CA-8AA3-7E42EEDB32AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C40300-73F9-46CA-8AA3-7E42EEDB32AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C40300-73F9-46CA-8AA3-7E42EEDB32AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
